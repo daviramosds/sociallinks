@@ -8,9 +8,10 @@ const Index = ({ data }) => {
              <Head>
                 <title>{data.pagetitle}</title>
             </Head>
-        <div className="w-1/2 mx-auto text-center p-8">
-            <h1 className="font-bold text-4xl">{data.title}</h1>
+        <div className="w-1/2 mx-auto text-center p-8 h-screen">
+            {/* <h1 className="font-bold text-4xl">{data.title}</h1> */}
             <img src={data.logo.url} className="mx-auto mt-4 rounded-full shadow-2xl w-64"/>
+            <p className="mt-4 text-lg">{data.title}</p>
             {data.body.map((item) => {
                 if (item.slice_type === 'secao') {
                     return <h2 className="font-bold text-2xl pt-4">{item.primary.nome}</h2>
@@ -31,10 +32,10 @@ const Index = ({ data }) => {
                 return 
                 return null
             })}
-            <div className="py-4">
+            {/* <div className="py-4">
                 Projeto criado durante o evendo Dev10K | <a href="https://devpleno.com">DevPleno</a> <br/>
                 Código fonte disponivel em <a href="https://github.com/daviramosds/sociallinks">https://github.com/daviramosds/sociallinks</a>
-            </div>
+            </div> */}
         </div>
         </div>
     )
